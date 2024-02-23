@@ -7,13 +7,15 @@
 int main() {
 	char *input;
 	size_t size = 132;
+
 	input = (char *) malloc (size + 1); 
 
 	do
 	{
 		prmt();
 		usrinput(input, size);
-	} while (1);
+		/* exe(input); */
+	} while(1);
 	
 
 	return 0;

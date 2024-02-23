@@ -3,11 +3,12 @@
 /*
  *The headers
  */
+#include <sys/types.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <stdbool.h> 
 #include <unistd.h>
-/* #include <stdbool.h> */
 
 
 
@@ -18,6 +19,7 @@
 void cout(char *msg);
 void prmt();
 void usrinput(char *input, size_t sze);
+void exe(char *input);
 
 
 

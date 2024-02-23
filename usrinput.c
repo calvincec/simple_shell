@@ -26,9 +26,11 @@ void usrinput(char *input, size_t sze) {
 	if (var == NULL) {
         if (feof(stdin)) {
             cout("\n");
+			free(input);
             exit(1);
         } else {
             cout("Error while reading input.\n");
+			free(input);
             exit(0);
         }
     }
