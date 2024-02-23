@@ -14,7 +14,7 @@ int main() {
 	{
 		prmt();
 		usrinput(input, size);
-		/* exe(input); */
+		exe(input);
 	} while(1);
 	
 
