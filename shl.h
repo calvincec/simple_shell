@@ -16,7 +16,7 @@
  *Function prototypes
  */
 
-void cout(char *msg);
+void cout(const char *msg);
 void prmt();
 void usrinput(char *input, size_t sze);
 void exe(char *input);

@@ -4,6 +4,6 @@
  * cout - write a message to the standard output
  * @msg: the message to write
 */
-void cout(char *msg) {
-	write(1, msg, strlen(msg));
+void cout(const char *msg) {
+	write(STDOUT_FILENO, msg, strlen(msg));
 }

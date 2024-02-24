@@ -8,10 +8,11 @@ void exe(char *input) {
 
     if (child_pid == -1) {
         perror("fork");
+        exit(EXIT_FAILURE);
     } else if (child_pid == 0) {
         printf("Child process ID: %d\n", getpid());
     } else {
-		printf("Parent process ID: %d\n", getpid());
+		printf("Parent process ID: %d\n", getppid());
         
     }
 	free(input);
