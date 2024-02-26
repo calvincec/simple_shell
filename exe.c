@@ -33,7 +33,7 @@ void exe(char *input) {
 		if (argvec[0] == NULL)
 			exit(0);
 		
-       execve(argvec[0], argvec, NULL);
+       execve(get_location(argvec[0]), argvec, NULL);
 
        cout("error executing command. \n");
        exit(0);
