@@ -21,23 +21,16 @@ void removenewln(char *input) {
  * @input: the input buffer
  * @sze: the size of the buffer
  */
-void usrinput(char *input, size_t sze) {
-	char *var = fgets(input, sze, stdin);
-	if (var == NULL) {
+void usrinput(char **input, size_t *sze) {
+	ssize_t num_chars = getline(input, sze, stdin);
+	if (num_chars == -1) {
         if (feof(stdin)) {
             cout("\n");
-			free(input);
             exit(1);
         } else {
             cout("Error while reading input.\n");
-			free(input);
             exit(0);
         }
     }
-    removenewln(input); 
+    removenewln(*input); 
 }
-
-/**
- * SUGGESTED IMPROVEMENTS/ POSSIBLE BUGS
- * fgets should not be used a speciefied by alx, try using getline instead
-*/
