@@ -11,6 +11,7 @@ void exe(char *input) {
         exit(EXIT_FAILURE);
     } else if (child_pid == 0) {
        // printf("Child process ID: %d\n", getpid());
+       //max 120 arguments
        char *my_args[120];
        int count=0;
 
@@ -20,6 +21,7 @@ void exe(char *input) {
         my_args[count++]=token;
         token = strtok(NULL, " ");
        }
+       
        my_args[count]=NULL;
         //execute command
        execvp(my_args[0],my_args);
