@@ -28,5 +28,6 @@ void free_ls(char **a);
 char *str_dup(char *input);
 int isde(char tocheck, char *de);
 int str_cmp(char *s1, char *s2);
+ssize_t get_line(char **lineptr, size_t *n);
 
 #endif /* SHL_H */

@@ -29,7 +29,7 @@ void removenewln(char *input)
  */
 void usrinput(char **input, size_t *sze)
 {
-	ssize_t num_chars = getline(input, sze, stdin);
+	ssize_t num_chars = get_line(input, sze);
 
 	if (num_chars == -1)
 	{
