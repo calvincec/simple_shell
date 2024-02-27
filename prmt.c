@@ -3,7 +3,7 @@
 /**
  * prmt - write a prompt to the standard output
  */
-void prmt()
+void prmt(void)
 {
 	cout("$ ");
 }

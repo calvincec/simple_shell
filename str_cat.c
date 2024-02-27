@@ -1,7 +1,7 @@
 #include "shl.h"
 
 /**
- * _strcat - cancatenate strings just call it without assigning it
+ * str_cat - cancatenate strings just call it without assigning it
  * @dest: char pointer
  * @src: char pointer
  * Return: char pointer

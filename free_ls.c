@@ -11,7 +11,7 @@ void free_ls(char **a)
 
 	if (a == NULL)
 		return;
-	while (a[i])		
+	while (a[i])
 	{
 		free(a[i]);
 		i++;

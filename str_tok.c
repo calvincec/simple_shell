@@ -18,7 +18,6 @@ char **str_tok(char *str, char *de)
 		if ((!isde(str[strc], de) && isde(str[strc + 1], de)) ||
 			(!isde(str[strc], de) && str[strc + 1] == '\0'))
 			numwords++;
-			
 	if (numwords == 0)
 		return (NULL);
 	s = malloc((1 + numwords) * sizeof(char *));
@@ -26,9 +25,8 @@ char **str_tok(char *str, char *de)
 		return (NULL);
 	for (strc = 0, wordc = 0; wordc < numwords ; wordc++)
 	{
-		while(isde(str[strc], de) && str[strc] != '\0')
+		while (isde(str[strc], de) && str[strc] != '\0')
 			strc++;
-
 		wordloop = 0;
 		while (!isde(str[strc + wordloop], de) && str[strc + wordloop] != '\0')
 			wordloop++;
@@ -44,8 +42,7 @@ char **str_tok(char *str, char *de)
 			s[wordc][m] = str[strc++];
 
 		s[wordc][m] = '\0';
-
-		if(str[strc] == '\0')
+		if (str[strc] == '\0')
 			break;
 	}
 	s[numwords] = NULL;
@@ -55,7 +52,8 @@ char **str_tok(char *str, char *de)
 /**
  * isde - checks if a character is a delimiter
  * @tocheck: the character to check
- * @de: the delimiter 
+ * @de: the delimiter
+ * Return: 1 if it is a delimiter, 0 if not
 */
 int isde(char tocheck, char *de)
 {
@@ -66,28 +64,9 @@ int isde(char tocheck, char *de)
 			return (1);
 	return (0);
 }
-/**
- * main - test the str_tok function
- * Return: 0 on success
-*/
-int mainy(void)
-{
-	char *s = "hello world";
-	char **a;
-	int i;
-
-	a = str_tok(s, " ");
-	printf("a: %s|\n", a[1]);
-	for (i = 0; a[i]; i++)
-	{
-		printf("%s\n", a[i]);
-		free(a[i]);
-	}
-	return (0);
-}
 
 /**
- * POSSIBLE ERRORS/SUGGESTIONS
+ * notning - POSSIBLE ERRORS/SUGGESTIONS
  * remember to free up memory(the array returned by str_tok) after using it
  * always use free_ls to free up memory for the array returned by strtow
 */
