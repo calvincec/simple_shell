@@ -21,9 +21,12 @@ int str_len(char *s)
  * @dest: destination string
  * @src: source string
  */
-void str_cpy(char *dest, char *src) {
+void str_cpy(char *dest, char *src)
+{
 	int i = 0;
-	while (src[i] != '\0') {
+
+	while (src[i] != '\0')
+	{
 		dest[i] = src[i];
 		i++;
 	}
