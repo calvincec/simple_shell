@@ -4,7 +4,7 @@
  * str_dup - duplicate a string
  * @input: the string to duplicate
  * Return: a pointer to the new string
-*/
+ */
 char *str_dup(char *input)
 {
 	char *output = malloc(str_len(input) + 1);

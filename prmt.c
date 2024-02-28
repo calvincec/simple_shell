@@ -1,7 +1,8 @@
 #include "shl.h"
 
 /**
- * prmt - write a prompt to the standard output
+ *prmt - write a prompt to the standard output
+ *Return: void
  */
 void prmt(void)
 {
