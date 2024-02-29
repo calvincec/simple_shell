@@ -26,9 +26,4 @@ int main(void)
 }
 
 
-/**
- * nothing - SUGGESTED IMPROVEMENTS/ POSSIBLE BUGS
- * remember to free the input buffer
- * remember to free the location buffer(containing the path to the command)
- * Are you sure the size of the input buffer is 132?
-*/
+

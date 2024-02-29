@@ -48,9 +48,3 @@ char *path_get(char *cmd)
 	return (NULL);
 }
 
-
-/**
- * nothing - POSSIBLE ERRORS/SUGGESTIONS
- * remember to free up memory(the array returned by str_tok) after using it
- * always use free_ls to free up memory for the array returned by strtow
-*/

@@ -9,9 +9,10 @@ int *at_oi(char *input)
 {
 	int *result = malloc(3 * sizeof(int));
 	int i, is_neg;
+
 	is_neg = 0;
 	i = 0;
-	if(input[0]=='-')
+	if (input[0] == '-')
 	{
 		is_neg = 1;
 		i++;
@@ -35,21 +36,3 @@ int *at_oi(char *input)
 	return (result);
 }
 
-/**
- * main - test the at_oi function
- * Return: 0
- */
-int mayin(void)
-{
-	int *result;
-	result = at_oi("123");
-	printf("is no: %d\n", result[0]);
-	printf("%d\n", result[1]);
-	result = at_oi("-123");
-	printf("is no: %d\n", result[0]);
-	printf("%d\n", result[1]);
-	result = at_oi("123a");
-	printf("is no: %d\n", result[0]);
-	printf("%d\n", result[1]);
-	return (0);
-}

@@ -6,5 +6,5 @@
 */
 void cout(char *msg)
 {
-	write(1, msg, strlen(msg));
+	write(1, msg, str_len(msg));
 }

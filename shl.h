@@ -23,7 +23,7 @@
  */
 
 void cout(char *msg);
-void prmt();
+void prmt(void);
 void usrinput(char **input, size_t *sze);
 int exe(char *input);
 void removenewln(char *input);

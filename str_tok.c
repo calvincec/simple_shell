@@ -65,8 +65,3 @@ int isde(char tocheck, char *de)
 	return (0);
 }
 
-/**
- * notning - POSSIBLE ERRORS/SUGGESTIONS
- * remember to free up memory(the array returned by str_tok) after using it
- * always use free_ls to free up memory for the array returned by strtow
-*/
