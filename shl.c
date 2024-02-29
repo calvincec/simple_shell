@@ -6,21 +6,23 @@
  */
 int main(void)
 {
+	int ret;
 	char *input;
-	size_t size = 132;
+	size_t size = 1024;
 
+	ret = 0;
 	input = (char *) malloc(size + 1);
 	do {
 		prmt();
 		usrinput(&input, &size);
 		if (str_cmp(input, "exit") == 0)
 			break;
-		exe(input);
+		ret = exe(input);
 	} while (1);
 
 	free(input);
 
-	return (0);
+	return (ret);
 }
 
 

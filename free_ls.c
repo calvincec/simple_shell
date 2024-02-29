@@ -7,14 +7,15 @@
 
 void free_ls(char **a)
 {
-	int i;
+	int i = 0;
 
-	if (a == NULL)
-		return;
 	while (a[i])
 	{
 		free(a[i]);
 		i++;
 	}
+	if(i == 0)
+		return;
+
 	free(a);
 }

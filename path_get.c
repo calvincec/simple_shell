@@ -31,6 +31,7 @@ char *path_get(char *cmd)
 			if (stat(file_path, &buf) == 0)
 			{
 				free(pth_cp);
+				free_ls(all_paths);
 				return (file_path);
 			}
 			else
@@ -40,6 +41,7 @@ char *path_get(char *cmd)
 
 		}
 		free(pth_cp);
+		free_ls(all_paths);
 		return (NULL);
 	}
 
