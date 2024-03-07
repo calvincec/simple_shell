@@ -39,6 +39,7 @@ ssize_t get_line(char **lineptr, size_t *n);
 char *path_get(char *cmd);
 int *at_oi(char *input);
 int exit_shell(char **input, char *input_str);
+char *custom_fgets(char *buffer, int size, FILE *stream);
 
 /* from Whitney */
 
